@@ -1,0 +1,11 @@
+# Environment files
+.env
+mcp_config.json
+
+# Draft files
+portfolio-draft.html
+stitch_screen.html
+
+# OS files
+Thumbs.db
+.DS_Store
