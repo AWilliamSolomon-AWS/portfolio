@@ -3,421 +3,2458 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta name="description" content="A. William Solomon — Specialized Church Web Developer & Digital Strategist. Designing modern, visitor-first, high-performance websites for local churches.">
-  <title>A. William Solomon — Church Web Developer</title>
-  
-  <!-- Tailwind CSS & Fonts from Stitch Design -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-  
-  <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-on-surface": "#f1f0f4",
-                        "surface-container-high": "#e9e8eb",
-                        "on-tertiary-fixed-variant": "#5d4208",
-                        "on-surface-variant": "#43474e",
-                        "on-error": "#ffffff",
-                        "on-background": "#1a1c1e",
-                        "secondary-container": "#b8e9e5",
-                        "on-primary": "#ffffff",
-                        "secondary-fixed-dim": "#9fd0cb",
-                        "surface-variant": "#e3e2e5",
-                        "primary": "#0A3D62",
-                        "outline-variant": "#c3c6cf",
-                        "surface-container": "#eeedf1",
-                        "surface-container-highest": "#e3e2e5",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed-variant": "#2a486c",
-                        "inverse-primary": "#abc9f3",
-                        "on-secondary-container": "#3c6a67",
-                        "surface-bright": "#faf9fc",
-                        "on-secondary-fixed": "#00201e",
-                        "on-tertiary-fixed": "#271900",
-                        "on-tertiary-container": "#d9b26f",
-                        "inverse-surface": "#2f3033",
-                        "surface": "#faf9fc",
-                        "secondary": "#376663",
-                        "outline": "#73777f",
-                        "surface-dim": "#dad9dd",
-                        "on-tertiary": "#ffffff",
-                        "on-primary-container": "#9cbae4",
-                        "error": "#ba1a1a",
-                        "primary-fixed-dim": "#abc9f3",
-                        "on-surface": "#1a1c1e",
-                        "surface-container-low": "#f4f3f6",
-                        "tertiary": "#442e00",
-                        "tertiary-fixed-dim": "#e8c17c",
-                        "on-primary-fixed": "#001c38",
-                        "on-secondary": "#ffffff",
-                        "on-secondary-fixed-variant": "#1e4e4b",
-                        "secondary-fixed": "#bbece8",
-                        "error-container": "#ffdad6",
-                        "background": "#faf9fc",
-                        "surface-tint": "#436085",
-                        "primary-container": "#2c4a6e",
-                        "tertiary-fixed": "#ffdea8",
-                        "tertiary-container": "#5f440a",
-                        "primary-fixed": "#d3e4ff",
-                        "on-error-container": "#93000a"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "container-max": "1140px",
-                        "margin-mobile": "20px",
-                        "section-padding-mobile": "64px",
-                        "section-padding-desktop": "120px",
-                        "gutter": "32px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Literata"],
-                        "headline-lg": ["Literata"],
-                        "body-md": ["Work Sans"],
-                        "headline-lg-mobile": ["Literata"],
-                        "body-lg": ["Work Sans"],
-                        "headline-xl": ["Literata"],
-                        "label-md": ["Work Sans"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
-                        "headline-lg": ["36px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "body-md": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
+  <title>A. William Solomon — Web Design & Development for Ministries</title>
+  <meta name="description" content="Professional web design and development for churches, ministries and faith-based organizations by A. William Solomon."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
   <style>
-        .texture-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23123356' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-        }
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --navy: #102A43;
+      --midnight: #0B1F33;
+      --ivory: #FAF9F6;
+      --stone: #F2F0EA;
+      --gold: #B88A2A;
+      --gold-hover: #9A711C;
+      --slate: #52606D;
+      --border: #D9E1E8;
+      --white: #FFFFFF;
+
+      --font-serif: 'DM Serif Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --max-width: 1140px;
+      --section-py: 120px;
+      --section-py-mobile: 72px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--slate);
+      background-color: var(--ivory);
+    }
+
+    ::selection {
+      background-color: var(--navy);
+      color: var(--ivory);
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, textarea { font-family: inherit; font-size: inherit; }
+    ul { list-style: none; }
+
+    /* ===== UTILITIES ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .section-heading {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--slate);
+      max-width: 600px;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 14px 28px;
+      border-radius: 10px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--navy);
+      color: var(--ivory);
+      border: 1.5px solid var(--navy);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold);
+      border-color: var(--gold);
+      color: var(--midnight);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--navy);
+      border-color: var(--navy);
+      color: var(--ivory);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 249, 246, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background-color var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--slate);
+      transition: color var(--transition);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--gold);
+      transition: width var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--navy);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      margin-left: 16px;
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+    }
+
+    .nav-mobile-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: var(--navy);
+      position: relative;
+      transition: all var(--transition);
+    }
+
+    .nav-mobile-toggle span::before,
+    .nav-mobile-toggle span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 2px;
+      background-color: var(--navy);
+      transition: all var(--transition);
+    }
+
+    .nav-mobile-toggle span::before { top: -7px; }
+    .nav-mobile-toggle span::after { top: 7px; }
+
+    .nav-mobile-toggle.active span { background-color: transparent; }
+    .nav-mobile-toggle.active span::before { top: 0; transform: rotate(45deg); }
+    .nav-mobile-toggle.active span::after { top: 0; transform: rotate(-45deg); }
+
+    .nav-mobile-menu {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background-color: var(--ivory);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px 32px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav-mobile-menu.active {
+      display: flex;
+    }
+
+    .nav-mobile-menu .nav-link {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 0 100px;
+      background-color: var(--ivory);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .hero-heading {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--slate);
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-card {
+      position: relative;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 8px 40px rgba(16, 42, 67, 0.06), 0 2px 12px rgba(16, 42, 67, 0.04);
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center 5%;
+      border-radius: 14px;
+    }
+
+    .hero-gold-accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .anim {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .anim.slide-right {
+      transform: translateX(32px);
+    }
+
+    .anim.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+
+    .anim-delay-1 { transition-delay: 0.1s; }
+    .anim-delay-2 { transition-delay: 0.2s; }
+    .anim-delay-3 { transition-delay: 0.35s; }
+    .anim-delay-4 { transition-delay: 0.5s; }
+    .anim-delay-5 { transition-delay: 0.65s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ===== SELECTED WORK ===== */
+    .work {
+      padding: var(--section-py) 0;
+      background-color: var(--stone);
+    }
+
+    .work-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .work-header .section-desc {
+      margin: 0 auto;
+    }
+
+    .case-study {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(16, 42, 67, 0.04);
+    }
+
+    .case-study-image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .case-study-body {
+      padding: 48px;
+    }
+
+    .case-study-category {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .case-study-title {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .case-study-desc {
+      font-size: 17px;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 640px;
+    }
+
+    .case-study-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color var(--transition), gap var(--transition);
+    }
+
+    .case-study-link:hover {
+      color: var(--gold);
+      gap: 12px;
+    }
+
+    /* Secondary project grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .project-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(16, 42, 67, 0.03);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(16, 42, 67, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .project-card-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .project-card-body {
+      padding: 28px 32px 32px;
+    }
+
+    .project-card-category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .project-card-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .project-card-desc {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: var(--section-py) 0;
+      background-color: var(--ivory);
+    }
+
+    .services-header {
+      margin-bottom: 64px;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 32px;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .service-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .service-number {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: var(--border);
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .service-content h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .service-content p {
+      font-size: 16px;
+      color: var(--slate);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: var(--section-py) 0;
+      background-color: var(--stone);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      margin-bottom: 24px;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      color: var(--slate);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about-focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .about-focus-tag {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+
+    .about-image-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 8px 32px rgba(16, 42, 67, 0.05);
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 5%;
+      border-radius: 12px;
+    }
+
+    /* ===== PROCESS ===== */
+    .process {
+      padding: var(--section-py) 0;
+      background-color: var(--ivory);
+    }
+
+    .process-header {
+      margin-bottom: 64px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .process-step {
+      padding: 0;
+    }
+
+    .process-step-number {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .process-step-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .process-step h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .process-step p {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+
+    /* ===== TECHNOLOGY ===== */
+    .technology {
+      padding: 80px 0;
+      background-color: var(--stone);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tech-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .tech-header .section-label {
+      margin-bottom: 12px;
+    }
+
+    .tech-chips {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech-chip {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .tech-chip:hover {
+      border-color: var(--gold);
+      box-shadow: 0 2px 8px rgba(184, 138, 42, 0.08);
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial {
+      padding: var(--section-py) 0;
+      background-color: var(--ivory);
+    }
+
+    .testimonial-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      line-height: 1.5;
+      color: var(--navy);
+      font-style: italic;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .testimonial-quote::before {
+      content: '\201C';
+      font-family: var(--font-serif);
+      font-size: 80px;
+      color: var(--gold);
+      opacity: 0.3;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 1;
+    }
+
+    .testimonial-author {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .testimonial-role {
+      font-size: 14px;
+      color: var(--slate);
+      margin-top: 4px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      padding: var(--section-py) 0;
+      background-color: var(--stone);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info > p {
+      font-size: 17px;
+      color: var(--slate);
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .contact-method:hover {
+      border-color: var(--gold);
+      box-shadow: 0 2px 12px rgba(184, 138, 42, 0.06);
+    }
+
+    .contact-method-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-method-icon.whatsapp {
+      background-color: rgba(37, 211, 102, 0.08);
+    }
+
+    .contact-method-icon.email-icon {
+      background-color: rgba(16, 42, 67, 0.06);
+    }
+
+    .contact-method-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .contact-method-value {
+      font-size: 13px;
+      color: var(--slate);
+      margin-top: 2px;
+    }
+
+    .contact-method-arrow {
+      margin-left: auto;
+      color: var(--border);
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .contact-method:hover .contact-method-arrow {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
+
+    /* Form */
+    .contact-form-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(16, 42, 67, 0.04);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background-color: var(--ivory);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      color: var(--navy);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #9EAAB8;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(16, 42, 67, 0.06);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      width: 100%;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 100px 0;
+      background-color: var(--navy);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+
+    .final-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      color: var(--ivory);
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      font-size: 17px;
+      color: rgba(250, 249, 246, 0.65);
+      margin-bottom: 40px;
+    }
+
+    .final-cta .btn-primary {
+      background-color: var(--gold);
+      border-color: var(--gold);
+      color: var(--midnight);
+    }
+
+    .final-cta .btn-primary:hover {
+      background-color: var(--ivory);
+      border-color: var(--ivory);
+      color: var(--navy);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: var(--midnight);
+      padding: 60px 0 40px;
+      color: rgba(250, 249, 246, 0.5);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--ivory);
+      margin-bottom: 8px;
+    }
+
+    .footer-subtitle {
+      font-size: 14px;
+      color: rgba(250, 249, 246, 0.45);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-link {
+      font-size: 14px;
+      color: rgba(250, 249, 246, 0.5);
+      transition: color var(--transition);
+    }
+
+    .footer-link:hover {
+      color: var(--ivory);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(250, 249, 246, 0.08);
+      padding-top: 24px;
+      font-size: 13px;
+    }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--navy);
+      color: var(--ivory);
+      padding: 16px 28px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(16, 42, 67, 0.2);
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 200;
+    }
+
+    .toast.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .toast-check {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-heading { font-size: 42px; }
+      .section-heading { font-size: 36px; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .about-grid { gap: 48px; }
+      .contact-grid { gap: 48px; }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-py: 72px;
+      }
+
+      .container { padding: 0 24px; }
+
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-cta-desktop { display: none; }
+      .nav-mobile-toggle { display: flex; }
+
+      /* Hero */
+      .hero { padding: 48px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-heading { font-size: 36px; }
+      .hero-image-wrapper { order: -1; }
+      .hero-image-card { max-width: 320px; }
+      .hero-image-card img { height: 400px; }
+
+      /* Work */
+      .case-study-image { height: 280px; }
+      .case-study-body { padding: 28px 24px 32px; }
+      .case-study-title { font-size: 26px; }
+      .projects-grid { grid-template-columns: 1fr; }
+
+      /* Services */
+      .service-item { grid-template-columns: 40px 1fr; gap: 20px; padding: 28px 0; }
+
+      /* About */
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image-card { order: -1; }
+      .about-image-card img { height: 360px; }
+
+      /* Process */
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+
+      /* Testimonial */
+      .testimonial-quote { font-size: 22px; }
+
+      /* Contact */
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 28px 24px; }
+
+      /* Final CTA */
+      .final-cta h2 { font-size: 32px; }
+      .final-cta { padding: 72px 0; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; gap: 24px; }
+      .footer-nav { flex-wrap: wrap; gap: 20px; }
+
+      .section-heading { font-size: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-heading { font-size: 30px; }
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons .btn { width: 100%; }
+      .process-grid { grid-template-columns: 1fr; }
+      .section-heading { font-size: 26px; }
+    }
+
+    /* ===== JOIN OUR TEAM MODAL ===== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background-color: rgba(11, 31, 51, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background-color: var(--ivory);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 680px;
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(11, 31, 51, 0.25), 0 8px 24px rgba(11, 31, 51, 0.1);
+      transform: scale(0.95) translateY(12px);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .modal-backdrop.active .modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal::-webkit-scrollbar { width: 6px; }
+    .modal::-webkit-scrollbar-track { background: transparent; }
+    .modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--slate);
+      transition: background-color var(--transition), color var(--transition);
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      background-color: var(--stone);
+      color: var(--navy);
+    }
+
+    .modal-header {
+      padding: 48px 48px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+    }
+
+    .modal-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .modal-subtitle {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.65;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .modal-body {
+      padding: 32px 48px 48px;
+    }
+
+    .modal-intro {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Modal form reuses .form-group, .form-label, .form-input, .form-textarea */
+    .modal-form .form-label .required {
+      color: var(--gold);
+      margin-left: 2px;
+    }
+
+    .modal-form .form-hint {
+      font-size: 12px;
+      color: var(--slate);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .modal-form .form-error {
+      font-size: 12px;
+      color: #C0392B;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .modal-form .form-group.has-error .form-input,
+    .modal-form .form-group.has-error .form-textarea,
+    .modal-form .form-group.has-error .form-select {
+      border-color: #C0392B;
+    }
+
+    .modal-form .form-group.has-error .form-error {
+      display: block;
+    }
+
+    /* Select */
+    .form-select {
+      width: 100%;
+      padding: 14px 16px;
+      background-color: var(--ivory);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: var(--font-sans);
+      color: var(--navy);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2352606D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .form-select:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(16, 42, 67, 0.06);
+    }
+
+    .form-select option[value=""] { color: #9EAAB8; }
+
+    /* Phone row */
+    .phone-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+    }
+
+    /* Photo upload */
+    .photo-upload-area {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color var(--transition), background-color var(--transition);
+      position: relative;
+    }
+
+    .photo-upload-area:hover {
+      border-color: var(--gold);
+      background-color: rgba(184, 138, 42, 0.02);
+    }
+
+    .photo-upload-area.has-file {
+      border-style: solid;
+      border-color: var(--border);
+      padding: 16px;
+    }
+
+    .photo-upload-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 12px;
+      color: var(--border);
+    }
+
+    .photo-upload-text {
+      font-size: 14px;
+      color: var(--slate);
+    }
+
+    .photo-upload-text strong {
+      color: var(--navy);
+    }
+
+    .photo-upload-formats {
+      font-size: 12px;
+      color: #9EAAB8;
+      margin-top: 6px;
+    }
+
+    .photo-preview {
+      display: none;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .photo-preview.active {
+      display: flex;
+    }
+
+    .photo-preview-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .photo-preview-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .photo-preview-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .photo-preview-size {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    .photo-preview-remove {
+      font-size: 13px;
+      font-weight: 600;
+      color: #C0392B;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color var(--transition);
+    }
+
+    .photo-preview-remove:hover {
+      background-color: rgba(192, 57, 43, 0.06);
+    }
+
+    .photo-upload-default { display: block; }
+    .photo-upload-area.has-file .photo-upload-default { display: none; }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .skill-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color var(--transition), background-color var(--transition);
+      font-size: 14px;
+      color: var(--navy);
+      user-select: none;
+    }
+
+    .skill-checkbox:hover {
+      border-color: var(--gold);
+    }
+
+    .skill-checkbox input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .skill-checkbox.checked {
+      background-color: rgba(16, 42, 67, 0.04);
+      border-color: var(--navy);
+    }
+
+    /* Availability radio */
+    .availability-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .availability-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color var(--transition), background-color var(--transition);
+      font-size: 14px;
+      color: var(--navy);
+      user-select: none;
+    }
+
+    .availability-option:hover {
+      border-color: var(--gold);
+    }
+
+    .availability-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .availability-option.checked {
+      background-color: rgba(16, 42, 67, 0.04);
+      border-color: var(--navy);
+    }
+
+    /* Consent */
+    .consent-wrapper {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: var(--stone);
+      border-radius: 12px;
+      margin-bottom: 28px;
+    }
+
+    .consent-wrapper input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .consent-wrapper label {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    /* Section divider inside modal */
+    .modal-section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .modal-section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    /* Success state */
+    .modal-success {
+      text-align: center;
+      padding: 64px 48px;
+    }
+
+    .modal-success-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: rgba(184, 138, 42, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+
+    .modal-success h3 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .modal-success p {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto 32px;
+    }
+
+    /* Modal responsive */
+    @media (max-width: 768px) {
+      .modal-header { padding: 36px 24px 24px; }
+      .modal-body { padding: 24px 24px 36px; }
+      .modal-title { font-size: 26px; }
+      .modal-close { top: 12px; right: 12px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .phone-row { grid-template-columns: 120px 1fr; }
+      .modal-success { padding: 48px 24px; }
+      .modal-success h3 { font-size: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .modal { border-radius: 16px; }
+      .phone-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-tertiary-container selection:text-on-tertiary-container">
+<body>
 
-<!-- Navigation Bar: Single Line, Left-Aligned Name, Compact 60px Height -->
-<nav class="bg-surface/90 backdrop-blur-md sticky top-0 border-b border-outline-variant/40 z-50 h-[100px] flex items-center">
-  <div class="px-8 flex justify-between items-center w-full">
-    <a href="#" class="font-headline-md text-xl font-bold text-primary whitespace-nowrap">
-      A. William Solomon
-    </a>
-    <div class="hidden md:flex space-x-8">
-      <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#work">Work</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md px-2 py-1 rounded" href="#services">Services</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md px-2 py-1 rounded" href="#process">Process</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md px-2 py-1 rounded" href="#contact">Contact</a>
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#" class="nav-brand" aria-label="A. William Solomon - Home">A. William Solomon</a>
+    <div class="nav-links">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button type="button" class="btn btn-primary nav-cta nav-cta-desktop" onclick="openTeamModal()" aria-haspopup="dialog">Join Our Team</button>
     </div>
-    <a class="hidden md:inline-flex bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-label-md text-label-md hover:bg-tertiary-fixed-dim transition-colors shadow-sm hover:shadow" href="#contact">
-      Request Consultation
-    </a>
-    <button class="md:hidden text-primary" id="mobileToggle">
-      <span class="material-symbols-outlined">menu</span>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
     </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobileMenu" role="menu">
+    <a href="#work" class="nav-link" role="menuitem">Work</a>
+    <a href="#services" class="nav-link" role="menuitem">Services</a>
+    <a href="#about" class="nav-link" role="menuitem">About</a>
+    <a href="#process" class="nav-link" role="menuitem">Process</a>
+    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+    <button type="button" class="btn btn-primary" style="margin-top: 8px; text-align: center; width: 100%;" onclick="openTeamModal()">Join Our Team</button>
   </div>
 </nav>
 
-<main>
-  <!-- Hero Section (From Stitch Design) -->
-  <section class="relative py-16 md:py-24 overflow-hidden texture-bg">
-    <div class="max-w-[1140px] mx-auto px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      <!-- Image — LEFT -->
-      <div class="flex justify-center items-center order-first">
-          <div class="relative w-full max-w-[400px] mx-auto">
-            <!-- Soft outer glow ring -->
-            <div class="absolute -inset-4 bg-gradient-to-b from-primary/20 via-secondary/10 to-transparent rounded-[2rem] blur-2xl -z-10"></div>
-            <!-- Inner shadow layer -->
-            <div class="absolute -inset-1 bg-gradient-to-br from-primary/15 to-secondary/5 rounded-[1.75rem] -z-10"></div>
-            <img
-              alt="A. William Solomon - Church Web Developer"
-              class="w-full h-[540px] rounded-[1.5rem] object-cover shadow-2xl"
-              src="public/ChatGPT Image Jul 11, 2026, 11_15_26 PM.png"
-              style="object-position: center 5%; box-shadow: 0 32px 64px -12px rgba(10,61,98,0.35), 0 8px 24px -4px rgba(10,61,98,0.15);"
-            />
-            <!-- Subtle bottom gradient fade for depth -->
-            <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-surface/30 to-transparent rounded-b-[1.5rem] pointer-events-none"></div>
-          </div>
-      </div>
-      <!-- Content — RIGHT -->
-      <div class="flex flex-col items-start text-left">
-        <span class="bg-secondary-container/20 text-secondary px-4 py-1 rounded-full font-label-md text-label-md mb-6 uppercase tracking-wider">Church Web Development</span>
-        <h1 class="font-headline-xl text-3xl md:text-5xl text-primary mb-6 leading-tight">
-          I build websites that help local churches grow their online presence
-        </h1>
-        <p class="font-body-lg text-lg md:text-xl text-on-surface-variant mb-10">
-          Helping ministries connect with their communities, archive sermons, and welcome new visitors through intentional, accessible web design.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a class="bg-tertiary-container text-on-tertiary-container px-8 py-3 rounded-full font-label-md text-label-md hover:bg-tertiary-fixed-dim transition-colors shadow-sm hover:shadow flex items-center justify-center gap-2" href="#work">
-            See my work
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
-          </a>
-          <a class="border border-primary text-primary px-8 py-3 rounded-full font-label-md text-label-md hover:bg-surface-container-low transition-colors flex items-center justify-center" href="#contact">
-            Get in touch
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Intro Section -->
-  <section class="py-16 md:py-20 bg-surface-container-lowest border-y border-outline-variant/30">
-    <div class="max-w-[840px] mx-auto px-8 text-center">
-      <p class="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed">
-        Churches trust me because I understand that a website is more than digital real estate—it's the digital front door to your local congregation. I prioritize true partnership, deep mission alignment, and technical reliability to ensure your digital presence serves your ministry effectively.
-      </p>
-    </div>
-  </section>
-
-  <!-- Core Services Section -->
-  <section class="py-20 md:py-28 bg-surface texture-bg" id="services">
-    <div class="max-w-[1140px] mx-auto px-8">
-      <div class="text-center mb-16">
-        <h2 class="font-headline-lg text-3xl md:text-4xl text-primary mb-4">Core Church Web Services</h2>
-        <p class="font-body-md text-on-surface-variant">Everything your ministry needs for a robust online presence.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">web</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Custom Church Website Design</h3>
-          <p class="font-body-md text-on-surface-variant">Tailored, accessible, visitor-first layouts reflecting your church's unique identity.</p>
-        </div>
-        <!-- Service 2 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Online Giving Integration</h3>
-          <p class="font-body-md text-on-surface-variant">Secure, seamless donation platforms (Planning Center, Tithe.ly, Subsplash) to support your ministry.</p>
-        </div>
-        <!-- Service 3 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">video_library</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Sermon Archive &amp; Livestream</h3>
-          <p class="font-body-md text-on-surface-variant">Easy-to-manage media libraries, YouTube/Vimeo embeds, and sermon series playlists.</p>
-        </div>
-        <!-- Service 4 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Event Calendars &amp; Registration</h3>
-          <p class="font-body-md text-on-surface-variant">Streamlined event scheduling, RSVP sign-ups, and downloadable permission forms.</p>
-        </div>
-        <!-- Service 5 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smartphone</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Mobile Responsive &amp; Fast</h3>
-          <p class="font-body-md text-on-surface-variant">Flawless, lightweight experiences optimized for mobile phones and local search SEO.</p>
-        </div>
-        <!-- Service 6 -->
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300 transform hover:-translate-y-1">
-          <div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center mb-6 text-secondary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">support_agent</span>
-          </div>
-          <h3 class="font-headline-md text-2xl text-primary mb-3">Staff CMS Training &amp; Support</h3>
-          <p class="font-body-md text-on-surface-variant">Simple dashboard controls and hands-on video training for your church administrative staff.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Church Case Study -->
-  <section class="py-20 md:py-28 bg-surface-container-lowest border-y border-outline-variant/30" id="work">
-    <div class="max-w-[1140px] mx-auto px-8">
-      <div class="text-center mb-16">
-        <span class="bg-secondary-container/20 text-secondary px-4 py-1 rounded-full font-label-md text-label-md mb-4 uppercase tracking-wider inline-block">Featured Church Website</span>
-        <h2 class="font-headline-lg text-3xl md:text-4xl text-primary mb-4">Grace Community Church</h2>
-      </div>
-      <div class="mb-12">
-        <img alt="Church Web Project Mockup" class="w-full rounded-2xl shadow-lg border border-outline-variant object-cover h-[450px]" src="church_web_mockup_1.png"/>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-surface p-6 rounded-xl border border-outline-variant/40">
-          <h3 class="font-headline-md text-xl text-primary mb-2">The Challenge</h3>
-          <p class="font-body-md text-on-surface-variant">The church needed a modern digital front door to welcome new community visitors while organizing weekly sermon videos and events.</p>
-        </div>
-        <div class="bg-surface p-6 rounded-xl border border-outline-variant/40">
-          <h3 class="font-headline-md text-xl text-primary mb-2">What I Built</h3>
-          <p class="font-body-md text-on-surface-variant">A responsive church web application with automated sermon video sync, digital connect card, and online giving integration.</p>
-        </div>
-        <div class="bg-surface p-6 rounded-xl border border-outline-variant/40">
-          <h3 class="font-headline-md text-xl text-primary mb-2">Design Approach</h3>
-          <p class="font-body-md text-on-surface-variant">Focused on mobile-first accessibility, clear service time callouts, statement of faith, and pastor leadership team bios.</p>
-        </div>
-        <div class="bg-surface p-6 rounded-xl border border-outline-variant/40">
-          <h3 class="font-headline-md text-xl text-primary mb-2">The Outcome</h3>
-          <p class="font-body-md text-on-surface-variant">140% increase in online guest connect cards and simplified content management for the church administrative team.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section class="py-20 md:py-28 bg-surface texture-bg" id="process">
-    <div class="max-w-[1140px] mx-auto px-8">
-      <div class="text-center mb-16">
-        <h2 class="font-headline-lg text-3xl md:text-4xl text-primary mb-4">My Development Process</h2>
-        <p class="font-body-md text-on-surface-variant">A proven 4-step framework for building effective church websites.</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined">search</span>
-            </div>
-            <span class="font-headline-md text-2xl text-outline font-bold opacity-30">01</span>
-          </div>
-          <h3 class="font-headline-md text-xl text-primary mb-3">Discovery</h3>
-          <p class="font-body-md text-on-surface-variant">Understanding your church mission, congregation, and target launch date.</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined">design_services</span>
-            </div>
-            <span class="font-headline-md text-2xl text-outline font-bold opacity-30">02</span>
-          </div>
-          <h3 class="font-headline-md text-xl text-primary mb-3">Design</h3>
-          <p class="font-body-md text-on-surface-variant">Crafting visitor-first page layouts and visual mockups for pastoral approval.</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined">code</span>
-            </div>
-            <span class="font-headline-md text-2xl text-outline font-bold opacity-30">03</span>
-          </div>
-          <h3 class="font-headline-md text-xl text-primary mb-3">Build</h3>
-          <p class="font-body-md text-on-surface-variant">Developing clean, accessible, and fast web code with sermon video players.</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant hover:shadow-[0_8px_30px_rgba(18,51,86,0.08)] transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined">rocket_launch</span>
-            </div>
-            <span class="font-headline-md text-2xl text-outline font-bold opacity-30">04</span>
-          </div>
-          <h3 class="font-headline-md text-xl text-primary mb-3">Launch &amp; Support</h3>
-          <p class="font-body-md text-on-surface-variant">Domain deployment, staff video training, and ongoing technical support.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial Quote Section -->
-  <section class="py-20 bg-surface-container-lowest border-y border-outline-variant/30">
-    <div class="max-w-[800px] mx-auto px-8 text-center">
-      <span class="material-symbols-outlined text-tertiary-container text-6xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
-      <blockquote class="font-headline-lg text-2xl md:text-3xl text-primary italic mb-6">
-        "Working on our church's digital presence was a true blessing. The website transformed how we welcome community visitors and present the Gospel online."
-      </blockquote>
-      <div class="font-body-md">
-        <span class="font-bold text-primary block">A. William Solomon</span>
-        <span class="text-on-surface-variant">Specialized Church Web Developer</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Consultation Section -->
-  <section class="py-20 md:py-28 bg-surface texture-bg" id="contact">
-    <div class="max-w-[1140px] mx-auto px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-        <div>
-          <h2 class="font-headline-lg text-3xl md:text-4xl text-primary mb-6">Let's build something for your church</h2>
-          <p class="font-body-lg text-lg text-on-surface-variant mb-8">
-            Ready to upgrade your church's website? Fill out the consultation request to discuss your ministry's needs, timeline, and goals.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-center gap-4 text-on-surface-variant">
-              <span class="material-symbols-outlined text-secondary">check_circle</span>
-              <span>100% Focused on Church &amp; Ministry Web Development</span>
-            </div>
-            <div class="flex items-center gap-4 text-on-surface-variant">
-              <span class="material-symbols-outlined text-secondary">check_circle</span>
-              <span>Turnaround Time: 2 to 4 Weeks</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_4px_20px_rgba(18,51,86,0.04)] border border-outline-variant">
-          <form onsubmit="handleForm(event)" class="space-y-5" id="consultationForm">
-            <div>
-              <label class="block font-label-md text-sm text-primary mb-2" for="name">Your Name &amp; Title</label>
-              <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="name" placeholder="Pastor John / Media Director" required type="text"/>
-            </div>
-            <div>
-              <label class="block font-label-md text-sm text-primary mb-2" for="church">Church Name</label>
-              <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="church" placeholder="Grace Community Church" required type="text"/>
-            </div>
-            <div>
-              <label class="block font-label-md text-sm text-primary mb-2" for="email">Email Address</label>
-              <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="email" placeholder="pastor@church.org" required type="email"/>
-            </div>
-            <div>
-              <label class="block font-label-md text-sm text-primary mb-2" for="message">Project Goals</label>
-              <textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" id="message" placeholder="Tell me about your church website goals..." rows="3" required></textarea>
-            </div>
-            <button class="w-full bg-tertiary-container text-on-tertiary-container px-8 py-3 rounded-full font-label-md text-label-md hover:bg-tertiary-fixed-dim transition-colors shadow-sm hover:shadow flex items-center justify-center gap-2 font-bold" type="submit">
-              Submit Request →
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-outline-variant py-8">
-  <div class="max-w-[1140px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-sm text-on-surface-variant">
-    <div class="font-bold text-primary text-base mb-2 md:mb-0">
-      A. William Solomon — Church Web Developer
-    </div>
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Introduction">
+  <div class="container hero-grid">
+    <!-- Content — Left -->
     <div>
-      © A. William Solomon. Built for Church Ministry.
+      <span class="hero-eyebrow anim">Digital Experiences for Ministries</span>
+      <h1 class="hero-heading anim anim-delay-1">Digital experiences built for ministries with purpose.</h1>
+      <p class="hero-desc anim anim-delay-2">I design and develop professional websites for churches and ministries — helping them present their message, sermons, events, and ministry work clearly and beautifully online.</p>
+      <div class="hero-buttons anim anim-delay-3">
+        <a href="#work" class="btn btn-primary">View My Work →</a>
+        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+      </div>
+    </div>
+    <!-- Portrait — Right -->
+    <div class="hero-image-wrapper anim slide-right anim-delay-2">
+      <div class="hero-image-card">
+        <img
+          alt="A. William Solomon — Web Designer and Developer specializing in ministry websites"
+          src="public/ChatGPT Image Jul 11, 2026, 11_15_26 PM.png"
+          loading="eager"
+        />
+        <div class="hero-gold-accent" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELECTED WORK ===== -->
+<section class="work" id="work" aria-label="Selected Work">
+  <div class="container">
+    <div class="work-header">
+      <span class="section-label anim">Selected Work</span>
+      <h2 class="section-heading anim anim-delay-1">Digital experiences I've designed and developed.</h2>
+      <p class="section-desc anim anim-delay-2">A selection of websites and digital experiences created to help ministries communicate clearly, serve their communities, and build a stronger online presence.</p>
+    </div>
+
+    <!-- Main Case Study -->
+    <div class="case-study anim">
+      <img
+        src="church_web_mockup_1.png"
+        alt="The Pillar of Fire Ministries website — full homepage design showing service times, sermons, and ministry information"
+        class="case-study-image"
+        loading="lazy"
+      />
+      <div class="case-study-body">
+        <div class="case-study-category">Ministry Website · Web Design · Development</div>
+        <h3 class="case-study-title">The Pillar of Fire Ministries</h3>
+        <p class="case-study-desc">A professional digital presence designed to organize ministry information, sermons, services, and resources into a clear and accessible experience.</p>
+        <a href="#" class="case-study-link" aria-label="View case study for The Pillar of Fire Ministries">View Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Secondary Projects -->
+    <div class="projects-grid">
+      <div class="project-card anim">
+        <img
+          src="church_sermons_mockup.png"
+          alt="Sermon archive and media library interface design"
+          class="project-card-image"
+          loading="lazy"
+        />
+        <div class="project-card-body">
+          <div class="project-card-category">Sermon & Media System</div>
+          <h3 class="project-card-title">Sermon Archive Platform</h3>
+          <p class="project-card-desc">An organized media system for sermons, video content, and downloadable ministry resources.</p>
+        </div>
+      </div>
+      <div class="project-card anim anim-delay-1">
+        <img
+          src="church_giving_mockup.png"
+          alt="Online giving and donation page design for churches"
+          class="project-card-image"
+          loading="lazy"
+        />
+        <div class="project-card-body">
+          <div class="project-card-category">Ministry Website · Giving</div>
+          <h3 class="project-card-title">Online Giving Experience</h3>
+          <p class="project-card-desc">A secure, accessible online giving experience integrated seamlessly into the ministry website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services" aria-label="Services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label anim">Services</span>
+      <h2 class="section-heading anim anim-delay-1">Web experiences designed around<br/>the needs of ministry.</h2>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">01</div>
+      <div class="service-content">
+        <h3>Ministry Websites</h3>
+        <p>Professional websites designed specifically for churches, ministries, pastors and faith-based organizations.</p>
+      </div>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">02</div>
+      <div class="service-content">
+        <h3>Sermon & Media Systems</h3>
+        <p>Organized sermon archives, video content, audio resources and downloadable materials.</p>
+      </div>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">03</div>
+      <div class="service-content">
+        <h3>Event & Service Pages</h3>
+        <p>Clear presentation of upcoming services, conferences, events and ministry programs.</p>
+      </div>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">04</div>
+      <div class="service-content">
+        <h3>Responsive Web Design</h3>
+        <p>Beautiful and functional experiences optimized for desktop, tablet and mobile.</p>
+      </div>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">05</div>
+      <div class="service-content">
+        <h3>Website Maintenance</h3>
+        <p>Ongoing updates, content management and technical support.</p>
+      </div>
+    </div>
+
+    <div class="service-item anim">
+      <div class="service-number">06</div>
+      <div class="service-content">
+        <h3>Digital Presence</h3>
+        <p>Helping ministries establish a consistent, professional and accessible online identity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about" aria-label="About">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label anim">About</span>
+        <h2 class="section-heading anim anim-delay-1">Building digital experiences with clarity, intention and purpose.</h2>
+        <p class="anim anim-delay-2">I'm A. William Solomon — a web designer and developer who specializes in creating professional digital experiences for churches, ministries and faith-based organizations.</p>
+        <p class="anim anim-delay-2">I believe that every ministry deserves a website that communicates their mission clearly, welcomes visitors warmly, and serves their congregation effectively. My work is focused on thoughtful design, organized content, and accessible, responsive web experiences that help ministries do what they do best — serve people.</p>
+        <div class="about-focus-list anim anim-delay-3">
+          <span class="about-focus-tag">Web Design</span>
+          <span class="about-focus-tag">Web Development</span>
+          <span class="about-focus-tag">User Experience</span>
+          <span class="about-focus-tag">Responsive Design</span>
+          <span class="about-focus-tag">Content Organization</span>
+          <span class="about-focus-tag">Ministry Websites</span>
+          <span class="about-focus-tag">Accessible Experiences</span>
+        </div>
+      </div>
+      <div class="anim slide-right anim-delay-2">
+        <div class="about-image-card">
+          <img
+            alt="A. William Solomon — portrait"
+            src="public/Untitled.png"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process" aria-label="My Process">
+  <div class="container">
+    <div class="process-header">
+      <span class="section-label anim">My Process</span>
+      <h2 class="section-heading anim anim-delay-1">From idea to a finished digital experience.</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step anim">
+        <span class="process-step-number">01</span>
+        <span class="process-step-label">Discover</span>
+        <h3>Understand</h3>
+        <p>Understand the ministry, audience, goals and requirements.</p>
+      </div>
+      <div class="process-step anim anim-delay-1">
+        <span class="process-step-number">02</span>
+        <span class="process-step-label">Plan</span>
+        <h3>Structure</h3>
+        <p>Structure the content, user experience and website architecture.</p>
+      </div>
+      <div class="process-step anim anim-delay-2">
+        <span class="process-step-number">03</span>
+        <span class="process-step-label">Design</span>
+        <h3>Create</h3>
+        <p>Create the visual system, layout, typography and responsive experience.</p>
+      </div>
+      <div class="process-step anim anim-delay-3">
+        <span class="process-step-number">04</span>
+        <span class="process-step-label">Develop</span>
+        <h3>Build</h3>
+        <p>Build, test, optimize and prepare the website for launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECHNOLOGY ===== -->
+<section class="technology" aria-label="Technology">
+  <div class="container">
+    <div class="tech-header">
+      <span class="section-label anim">Built With</span>
+      <h2 class="section-heading anim anim-delay-1" style="font-size: 28px;">Modern Technology</h2>
+    </div>
+    <div class="tech-chips anim anim-delay-2">
+      <span class="tech-chip">HTML</span>
+      <span class="tech-chip">CSS</span>
+      <span class="tech-chip">JavaScript</span>
+      <span class="tech-chip">React</span>
+      <span class="tech-chip">Next.js</span>
+      <span class="tech-chip">WordPress</span>
+      <span class="tech-chip">Figma</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section class="testimonial" aria-label="Testimonial">
+  <div class="container">
+    <div class="testimonial-inner anim">
+      <span class="section-label">Kind Words</span>
+      <blockquote class="testimonial-quote">
+        Working on our church's digital presence was a true blessing. The website transformed how we welcome community visitors and present the Gospel online.
+      </blockquote>
+      <div class="testimonial-author">A. William Solomon</div>
+      <div class="testimonial-role">Web Designer & Developer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <span class="section-label anim">Contact</span>
+        <h2 class="section-heading anim anim-delay-1">Let's build something meaningful together.</h2>
+        <p class="anim anim-delay-2">Have a church, ministry or organization that needs a professional digital presence? Let's talk about how we can turn the vision into a clear, beautiful and useful online experience.</p>
+
+        <div class="contact-methods anim anim-delay-3">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/917013625926?text=Hi%20A.%20William%20Solomon%2C%20I%27d%20like%20to%20discuss%20a%20church%20website%20project."
+             target="_blank" rel="noopener noreferrer" class="contact-method" id="whatsapp-btn"
+             aria-label="Contact via WhatsApp">
+            <div class="contact-method-icon whatsapp">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#25D366" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-method-label">WhatsApp</div>
+              <div class="contact-method-value">Send a message</div>
+            </div>
+            <svg class="contact-method-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:thebornagainchristian1@gmail.com?subject=Church%20Website%20Inquiry"
+             class="contact-method" id="email-btn"
+             aria-label="Contact via Email">
+            <div class="contact-method-icon email-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            </div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">thebornagainchristian1@gmail.com</div>
+            </div>
+            <svg class="contact-method-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-card anim slide-right anim-delay-2">
+        <form onsubmit="handleForm(event)" id="consultationForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name & Role</label>
+            <input class="form-input" id="name" placeholder="e.g. Pastor John, Media Director" required type="text" autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="church">Church / Ministry Name</label>
+            <input class="form-input" id="church" placeholder="e.g. Grace Community Church" required type="text" autocomplete="organization"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" id="email" placeholder="e.g. pastor@church.org" required type="email" autocomplete="email"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Project Goals</label>
+            <textarea class="form-textarea" id="message" placeholder="Tell me about your project, goals, timeline and what you would like the website to accomplish." rows="4" required></textarea>
+          </div>
+          <button class="btn btn-primary form-submit" type="submit">Start a Project →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" aria-label="Call to action">
+  <div class="container">
+    <h2 class="anim">Let's build something meaningful together.</h2>
+    <p class="anim anim-delay-1">Professional digital experiences for churches, ministries and organizations.</p>
+    <a href="#contact" class="btn btn-primary anim anim-delay-2">Start a Project →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">A. William Solomon</div>
+        <div class="footer-subtitle">Web Design & Development for Churches and Ministries</div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#work" class="footer-link">Work</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#process" class="footer-link">Process</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      © 2026 A. William Solomon. All rights reserved.
     </div>
   </div>
 </footer>
 
-<!-- Toast Feedback -->
-<div id="toast" class="fixed bottom-6 right-6 bg-primary text-white px-6 py-4 rounded-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 z-50">
-  <span class="material-symbols-outlined text-secondary-container">check_circle</span>
-  <span id="toastText">Request submitted successfully!</span>
+<!-- ===== JOIN OUR TEAM MODAL ===== -->
+<div class="modal-backdrop" id="teamModal" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle">
+  <div class="modal" id="teamModalContent">
+    <button class="modal-close" onclick="closeTeamModal()" aria-label="Close application form">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Form State -->
+    <div id="teamFormState">
+      <div class="modal-header">
+        <span class="modal-eyebrow">Team Application</span>
+        <h2 class="modal-title" id="teamModalTitle">Join Our Team</h2>
+        <p class="modal-subtitle">Become part of a team using creativity, technology, and digital skills to support churches and ministries around the world.</p>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro">We are always glad to connect with individuals who have a heart for serving ministries and who can contribute their skills, experience, and creativity. Please complete the form below so we can learn more about you and your areas of expertise.</p>
+
+        <form id="teamApplicationForm" class="modal-form" novalidate>
+
+          <!-- PERSONAL INFORMATION -->
+          <span class="modal-section-label">Personal Information</span>
+
+          <div class="form-group" id="fg-fullname">
+            <label class="form-label" for="ta-fullname">Full Name <span class="required">*</span></label>
+            <input class="form-input" id="ta-fullname" type="text" placeholder="Enter your full name" required autocomplete="name"/>
+            <div class="form-error" id="err-fullname">Please enter your full name.</div>
+          </div>
+
+          <div class="form-group" id="fg-country">
+            <label class="form-label" for="ta-country">Country of Residence <span class="required">*</span></label>
+            <select class="form-select" id="ta-country" required>
+              <option value="" disabled selected>Select your country</option>
+            </select>
+            <div class="form-error" id="err-country">Please select your country.</div>
+          </div>
+
+          <div class="form-group" id="fg-state">
+            <label class="form-label" for="ta-state">State / Province / Region <span class="required">*</span></label>
+            <input class="form-input" id="ta-state" type="text" placeholder="Enter your state, province or region" required/>
+            <div class="form-error" id="err-state">Please enter your state, province or region.</div>
+          </div>
+
+          <div class="form-group" id="fg-church">
+            <label class="form-label" for="ta-church">Church / Ministry / Organization <span class="required">*</span></label>
+            <input class="form-input" id="ta-church" type="text" placeholder="Enter the name of your church or ministry" required autocomplete="organization"/>
+            <div class="form-error" id="err-church">Please enter your church or ministry name.</div>
+          </div>
+
+          <hr class="modal-section-divider"/>
+          <span class="modal-section-label">Contact Details</span>
+
+          <div class="form-group" id="fg-phone">
+            <label class="form-label" for="ta-phone">Contact Number <span class="required">*</span></label>
+            <div class="phone-row">
+              <select class="form-select" id="ta-phonecode" aria-label="Country calling code">
+                <option value="+1">+1 US</option>
+              </select>
+              <input class="form-input" id="ta-phone" type="tel" placeholder="Enter your contact number" required autocomplete="tel"/>
+            </div>
+            <div class="form-error" id="err-phone">Please provide your contact number.</div>
+          </div>
+
+          <div class="form-group" id="fg-email">
+            <label class="form-label" for="ta-email">Email Address <span class="required">*</span></label>
+            <input class="form-input" id="ta-email" type="email" placeholder="Enter your professional email address" required autocomplete="email"/>
+            <div class="form-error" id="err-email">Please enter a valid email address.</div>
+          </div>
+
+          <hr class="modal-section-divider"/>
+          <span class="modal-section-label">Profile Photo</span>
+
+          <div class="form-group" id="fg-photo">
+            <label class="form-label">Profile Photo <span class="required">*</span></label>
+            <p class="form-hint" style="margin-bottom: 10px;">Please upload a recent, clear photograph of yourself. Max 5 MB.</p>
+            <div class="photo-upload-area" id="photoUploadArea" onclick="document.getElementById('ta-photo').click()" role="button" tabindex="0" aria-label="Upload profile photo">
+              <div class="photo-upload-default">
+                <svg class="photo-upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                <div class="photo-upload-text"><strong>Click to upload</strong> your photo</div>
+                <div class="photo-upload-formats">JPG, JPEG, PNG or WEBP</div>
+              </div>
+              <div class="photo-preview" id="photoPreview">
+                <img class="photo-preview-img" id="photoPreviewImg" alt="Uploaded photo preview" src=""/>
+                <div class="photo-preview-info">
+                  <div class="photo-preview-name" id="photoPreviewName"></div>
+                  <div class="photo-preview-size" id="photoPreviewSize"></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="photo-preview-remove" id="photoRemoveBtn" style="display:none; margin-top: 8px;" onclick="removePhoto(event)">Remove photo</button>
+            <input type="file" id="ta-photo" accept=".jpg,.jpeg,.png,.webp" style="display:none" aria-hidden="true"/>
+            <div class="form-error" id="err-photo">Please upload a valid profile photo.</div>
+          </div>
+
+          <hr class="modal-section-divider"/>
+          <span class="modal-section-label">Skills & Experience</span>
+
+          <div class="form-group" id="fg-skills">
+            <label class="form-label">Areas of Expertise <span class="required">*</span></label>
+            <p class="form-hint" style="margin-bottom: 12px;">Please select or enter the skills, knowledge, and areas in which you can contribute.</p>
+            <div class="skills-grid" id="skillsGrid">
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Web Design"/> Web Design</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Web Development"/> Web Development</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="UI/UX Design"/> UI/UX Design</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Graphic Design"/> Graphic Design</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Video Editing"/> Video Editing</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Photography"/> Photography</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Content Writing"/> Content Writing</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Social Media Management"/> Social Media Management</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="SEO"/> SEO</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Digital Marketing"/> Digital Marketing</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="WordPress"/> WordPress</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Front-End Development"/> Front-End Development</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Back-End Development"/> Back-End Development</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Mobile App Development"/> Mobile App Development</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Project Management"/> Project Management</label>
+              <label class="skill-checkbox"><input type="checkbox" name="skills" value="Technical Support"/> Technical Support</label>
+            </div>
+            <div style="margin-top: 12px;">
+              <label class="form-label" for="ta-otherskills" style="font-weight: 500; font-size: 13px;">Other / Additional Skills</label>
+              <input class="form-input" id="ta-otherskills" type="text" placeholder="e.g. Audio Engineering, Translation, etc."/>
+            </div>
+            <div class="form-error" id="err-skills">Please select at least one area of expertise.</div>
+          </div>
+
+          <div class="form-group" id="fg-experience">
+            <label class="form-label" for="ta-experience">Relevant Experience <span class="required">*</span></label>
+            <textarea class="form-textarea" id="ta-experience" rows="3" placeholder="Briefly describe any relevant professional, ministry, technical, creative, or volunteer experience." required></textarea>
+            <div class="form-error" id="err-experience">Please describe your relevant experience.</div>
+          </div>
+
+          <div class="form-group" id="fg-about">
+            <label class="form-label" for="ta-about">Tell Us About Yourself</label>
+            <textarea class="form-textarea" id="ta-about" rows="3" placeholder="Briefly introduce yourself, your experience, and how you believe you could contribute to the team."></textarea>
+          </div>
+
+          <hr class="modal-section-divider"/>
+          <span class="modal-section-label">Availability</span>
+
+          <div class="form-group" id="fg-availability">
+            <label class="form-label">Current Availability <span class="required">*</span></label>
+            <div class="availability-options">
+              <label class="availability-option"><input type="radio" name="availability" value="Available to Serve" required/> Available to Serve</label>
+              <label class="availability-option"><input type="radio" name="availability" value="Available Part-Time"/> Available Part-Time</label>
+              <label class="availability-option"><input type="radio" name="availability" value="Available for Specific Projects"/> Available for Specific Projects</label>
+              <label class="availability-option"><input type="radio" name="availability" value="Available on a Volunteer Basis"/> Available on a Volunteer Basis</label>
+              <label class="availability-option"><input type="radio" name="availability" value="Currently Unavailable"/> Currently Unavailable</label>
+            </div>
+            <div class="form-error" id="err-availability">Please select your availability.</div>
+          </div>
+
+          <hr class="modal-section-divider"/>
+
+          <!-- Consent -->
+          <div class="form-group" id="fg-consent">
+            <div class="consent-wrapper">
+              <input type="checkbox" id="ta-consent" required/>
+              <label for="ta-consent">I confirm that the information provided above is accurate and may be used by the team to evaluate my application and contact me regarding potential opportunities to serve or collaborate.</label>
+            </div>
+            <div class="form-error" id="err-consent">Please confirm the information provided before submitting your application.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Submit Application →</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success State -->
+    <div id="teamSuccessState" style="display: none;">
+      <div class="modal-success">
+        <div class="modal-success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Application Received</h3>
+        <p>Thank you for your interest in joining our team. Your information has been received successfully. Our team will review your application and contact you if an opportunity aligns with your skills and experience.</p>
+        <button type="button" class="btn btn-primary" onclick="closeTeamModal()">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+  <svg class="toast-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  <span id="toastText">Your message has been sent successfully!</span>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
 <script>
+  // --- Form Handler ---
   function handleForm(e) {
     e.preventDefault();
-    const name = document.getElementById('name').value;
+    const nameVal = document.getElementById('name').value;
     const toast = document.getElementById('toast');
-    document.getElementById('toastText').innerText = `Thank you ${name}! Your consultation request has been submitted.`;
-    toast.classList.remove('opacity-0', 'pointer-events-none');
+    document.getElementById('toastText').innerText = `Thank you, ${nameVal}! Your project inquiry has been received.`;
+    toast.classList.add('active');
     document.getElementById('consultationForm').reset();
     setTimeout(() => {
-      toast.classList.add('opacity-0', 'pointer-events-none');
-    }, 4000);
+      toast.classList.remove('active');
+    }, 4500);
   }
+
+  // --- Mobile Menu ---
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+    mobileToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // --- Scroll Animations (Intersection Observer) ---
+  const animObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        animObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  document.querySelectorAll('.anim').forEach(el => {
+    // Check reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.classList.add('visible');
+    } else {
+      animObserver.observe(el);
+    }
+  });
+
+  // --- Smooth scroll offset for sticky nav ---
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const navHeight = document.querySelector('.nav').offsetHeight;
+        const y = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ===== JOIN OUR TEAM MODAL =====
+  const teamModal = document.getElementById('teamModal');
+  const teamModalContent = document.getElementById('teamModalContent');
+  const teamFormState = document.getElementById('teamFormState');
+  const teamSuccessState = document.getElementById('teamSuccessState');
+  const teamForm = document.getElementById('teamApplicationForm');
+
+  function openTeamModal() {
+    // Close mobile menu if open
+    mobileMenu.classList.remove('active');
+    mobileToggle.classList.remove('active');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    // Show form, hide success
+    teamFormState.style.display = '';
+    teamSuccessState.style.display = 'none';
+    teamModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // Focus first input after animation
+    setTimeout(() => {
+      const first = teamModalContent.querySelector('input, select');
+      if (first) first.focus();
+    }, 400);
+  }
+
+  function closeTeamModal() {
+    teamModal.classList.remove('active');
+    document.body.style.overflow = '';
+    // Reset form after close animation
+    setTimeout(() => {
+      teamForm.reset();
+      clearAllErrors();
+      // Reset photo
+      removePhoto();
+      // Reset checkbox/radio visual states
+      document.querySelectorAll('.skill-checkbox.checked').forEach(el => el.classList.remove('checked'));
+      document.querySelectorAll('.availability-option.checked').forEach(el => el.classList.remove('checked'));
+    }, 400);
+  }
+
+  // Close on backdrop click
+  teamModal.addEventListener('click', (e) => {
+    if (e.target === teamModal) closeTeamModal();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && teamModal.classList.contains('active')) closeTeamModal();
+  });
+
+  // --- Country list ---
+  const countries = [
+    'Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan',
+    'Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso','Burundi',
+    'Cabo Verde','Cambodia','Cameroon','Canada','Central African Republic','Chad','Chile','China','Colombia','Comoros','Congo','Costa Rica','Croatia','Cuba','Cyprus','Czech Republic',
+    'Democratic Republic of the Congo','Denmark','Djibouti','Dominica','Dominican Republic',
+    'East Timor','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Eswatini','Ethiopia',
+    'Fiji','Finland','France',
+    'Gabon','Gambia','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana',
+    'Haiti','Honduras','Hungary',
+    'Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Ivory Coast',
+    'Jamaica','Japan','Jordan',
+    'Kazakhstan','Kenya','Kiribati','Kuwait','Kyrgyzstan',
+    'Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg',
+    'Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Montenegro','Morocco','Mozambique','Myanmar',
+    'Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','North Korea','North Macedonia','Norway',
+    'Oman',
+    'Pakistan','Palau','Palestine','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal',
+    'Qatar',
+    'Romania','Russia','Rwanda',
+    'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Sweden','Switzerland','Syria',
+    'Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu',
+    'Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan',
+    'Vanuatu','Vatican City','Venezuela','Vietnam',
+    'Yemen',
+    'Zambia','Zimbabwe'
+  ];
+
+  const phoneCodeMap = {
+    'Afghanistan':'+93','Albania':'+355','Algeria':'+213','Andorra':'+376','Angola':'+244','Argentina':'+54','Armenia':'+374','Australia':'+61','Austria':'+43','Azerbaijan':'+994',
+    'Bahamas':'+1-242','Bahrain':'+973','Bangladesh':'+880','Barbados':'+1-246','Belarus':'+375','Belgium':'+32','Belize':'+501','Benin':'+229','Bhutan':'+975','Bolivia':'+591','Bosnia and Herzegovina':'+387','Botswana':'+267','Brazil':'+55','Brunei':'+673','Bulgaria':'+359','Burkina Faso':'+226','Burundi':'+257',
+    'Cabo Verde':'+238','Cambodia':'+855','Cameroon':'+237','Canada':'+1','Central African Republic':'+236','Chad':'+235','Chile':'+56','China':'+86','Colombia':'+57','Comoros':'+269','Congo':'+242','Costa Rica':'+506','Croatia':'+385','Cuba':'+53','Cyprus':'+357','Czech Republic':'+420',
+    'Democratic Republic of the Congo':'+243','Denmark':'+45','Djibouti':'+253','Dominica':'+1-767','Dominican Republic':'+1-809',
+    'East Timor':'+670','Ecuador':'+593','Egypt':'+20','El Salvador':'+503','Equatorial Guinea':'+240','Eritrea':'+291','Estonia':'+372','Eswatini':'+268','Ethiopia':'+251',
+    'Fiji':'+679','Finland':'+358','France':'+33',
+    'Gabon':'+241','Gambia':'+220','Georgia':'+995','Germany':'+49','Ghana':'+233','Greece':'+30','Grenada':'+1-473','Guatemala':'+502','Guinea':'+224','Guinea-Bissau':'+245','Guyana':'+592',
+    'Haiti':'+509','Honduras':'+504','Hungary':'+36',
+    'Iceland':'+354','India':'+91','Indonesia':'+62','Iran':'+98','Iraq':'+964','Ireland':'+353','Israel':'+972','Italy':'+39','Ivory Coast':'+225',
+    'Jamaica':'+1-876','Japan':'+81','Jordan':'+962',
+    'Kazakhstan':'+7','Kenya':'+254','Kiribati':'+686','Kuwait':'+965','Kyrgyzstan':'+996',
+    'Laos':'+856','Latvia':'+371','Lebanon':'+961','Lesotho':'+266','Liberia':'+231','Libya':'+218','Liechtenstein':'+423','Lithuania':'+370','Luxembourg':'+352',
+    'Madagascar':'+261','Malawi':'+265','Malaysia':'+60','Maldives':'+960','Mali':'+223','Malta':'+356','Marshall Islands':'+692','Mauritania':'+222','Mauritius':'+230','Mexico':'+52','Micronesia':'+691','Moldova':'+373','Monaco':'+377','Mongolia':'+976','Montenegro':'+382','Morocco':'+212','Mozambique':'+258','Myanmar':'+95',
+    'Namibia':'+264','Nauru':'+674','Nepal':'+977','Netherlands':'+31','New Zealand':'+64','Nicaragua':'+505','Niger':'+227','Nigeria':'+234','North Korea':'+850','North Macedonia':'+389','Norway':'+47',
+    'Oman':'+968',
+    'Pakistan':'+92','Palau':'+680','Palestine':'+970','Panama':'+507','Papua New Guinea':'+675','Paraguay':'+595','Peru':'+51','Philippines':'+63','Poland':'+48','Portugal':'+351',
+    'Qatar':'+974',
+    'Romania':'+40','Russia':'+7','Rwanda':'+250',
+    'Saint Kitts and Nevis':'+1-869','Saint Lucia':'+1-758','Saint Vincent and the Grenadines':'+1-784','Samoa':'+685','San Marino':'+378','Sao Tome and Principe':'+239','Saudi Arabia':'+966','Senegal':'+221','Serbia':'+381','Seychelles':'+248','Sierra Leone':'+232','Singapore':'+65','Slovakia':'+421','Slovenia':'+386','Solomon Islands':'+677','Somalia':'+252','South Africa':'+27','South Korea':'+82','South Sudan':'+211','Spain':'+34','Sri Lanka':'+94','Sudan':'+249','Suriname':'+597','Sweden':'+46','Switzerland':'+41','Syria':'+963',
+    'Taiwan':'+886','Tajikistan':'+992','Tanzania':'+255','Thailand':'+66','Togo':'+228','Tonga':'+676','Trinidad and Tobago':'+1-868','Tunisia':'+216','Turkey':'+90','Turkmenistan':'+993','Tuvalu':'+688',
+    'Uganda':'+256','Ukraine':'+380','United Arab Emirates':'+971','United Kingdom':'+44','United States':'+1','Uruguay':'+598','Uzbekistan':'+998',
+    'Vanuatu':'+678','Vatican City':'+379','Venezuela':'+58','Vietnam':'+84',
+    'Yemen':'+967',
+    'Zambia':'+260','Zimbabwe':'+263'
+  };
+
+  // Populate country select
+  const countrySelect = document.getElementById('ta-country');
+  const phoneCodeSelect = document.getElementById('ta-phonecode');
+
+  countries.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    countrySelect.appendChild(opt);
+  });
+
+  // Populate phone codes
+  function populatePhoneCodes() {
+    phoneCodeSelect.innerHTML = '';
+    const sorted = Object.entries(phoneCodeMap).sort((a, b) => a[0].localeCompare(b[0]));
+    sorted.forEach(([country, code]) => {
+      const opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = `${code} ${country}`;
+      phoneCodeSelect.appendChild(opt);
+    });
+  }
+  populatePhoneCodes();
+
+  // Sync phone code when country changes
+  countrySelect.addEventListener('change', () => {
+    const selected = countrySelect.value;
+    if (phoneCodeMap[selected]) {
+      phoneCodeSelect.value = phoneCodeMap[selected];
+    }
+  });
+
+  // --- Photo upload ---
+  const photoInput = document.getElementById('ta-photo');
+  const photoArea = document.getElementById('photoUploadArea');
+  const photoPreview = document.getElementById('photoPreview');
+  const photoPreviewImg = document.getElementById('photoPreviewImg');
+  const photoPreviewName = document.getElementById('photoPreviewName');
+  const photoPreviewSize = document.getElementById('photoPreviewSize');
+  const photoRemoveBtn = document.getElementById('photoRemoveBtn');
+
+  photoInput.addEventListener('change', () => {
+    const file = photoInput.files[0];
+    if (!file) return;
+    // Validate type
+    const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+    if (!validTypes.includes(file.type)) {
+      showFieldError('fg-photo', 'err-photo', 'Please upload a valid image file (JPG, JPEG, PNG or WEBP).');
+      photoInput.value = '';
+      return;
+    }
+    // Validate size (5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      showFieldError('fg-photo', 'err-photo', 'File size must be less than 5 MB.');
+      photoInput.value = '';
+      return;
+    }
+    clearFieldError('fg-photo');
+    // Show preview
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      photoPreviewImg.src = e.target.result;
+      photoPreviewName.textContent = file.name;
+      photoPreviewSize.textContent = (file.size / 1024).toFixed(1) + ' KB';
+      photoPreview.classList.add('active');
+      photoArea.classList.add('has-file');
+      photoRemoveBtn.style.display = '';
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Handle keyboard activation of upload area
+  photoArea.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      document.getElementById('ta-photo').click();
+    }
+  });
+
+  function removePhoto(e) {
+    if (e) e.stopPropagation();
+    photoInput.value = '';
+    photoPreviewImg.src = '';
+    photoPreview.classList.remove('active');
+    photoArea.classList.remove('has-file');
+    photoRemoveBtn.style.display = 'none';
+  }
+
+  // --- Skill checkbox visual toggle ---
+  document.querySelectorAll('.skill-checkbox input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.skill-checkbox').classList.toggle('checked', cb.checked);
+    });
+  });
+
+  // --- Availability radio visual toggle ---
+  document.querySelectorAll('.availability-option input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.availability-option').forEach(opt => opt.classList.remove('checked'));
+      radio.closest('.availability-option').classList.add('checked');
+    });
+  });
+
+  // --- Validation helpers ---
+  function showFieldError(groupId, errorId, msg) {
+    const group = document.getElementById(groupId);
+    if (group) group.classList.add('has-error');
+    const errEl = document.getElementById(errorId);
+    if (errEl && msg) errEl.textContent = msg;
+  }
+
+  function clearFieldError(groupId) {
+    const group = document.getElementById(groupId);
+    if (group) group.classList.remove('has-error');
+  }
+
+  function clearAllErrors() {
+    document.querySelectorAll('.modal-form .form-group.has-error').forEach(g => g.classList.remove('has-error'));
+  }
+
+  // --- Form submission ---
+  teamForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    clearAllErrors();
+    let valid = true;
+
+    // Full Name
+    const fullname = document.getElementById('ta-fullname').value.trim();
+    if (!fullname) { showFieldError('fg-fullname', 'err-fullname'); valid = false; }
+
+    // Country
+    const country = document.getElementById('ta-country').value;
+    if (!country) { showFieldError('fg-country', 'err-country'); valid = false; }
+
+    // State
+    const state = document.getElementById('ta-state').value.trim();
+    if (!state) { showFieldError('fg-state', 'err-state'); valid = false; }
+
+    // Church
+    const church = document.getElementById('ta-church').value.trim();
+    if (!church) { showFieldError('fg-church', 'err-church'); valid = false; }
+
+    // Phone
+    const phone = document.getElementById('ta-phone').value.trim();
+    if (!phone) { showFieldError('fg-phone', 'err-phone'); valid = false; }
+
+    // Email
+    const email = document.getElementById('ta-email').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) { showFieldError('fg-email', 'err-email'); valid = false; }
+
+    // Photo
+    if (!photoInput.files || !photoInput.files[0]) { showFieldError('fg-photo', 'err-photo'); valid = false; }
+
+    // Skills
+    const skillChecks = document.querySelectorAll('.skills-grid input[type="checkbox"]:checked');
+    const otherSkills = document.getElementById('ta-otherskills').value.trim();
+    if (skillChecks.length === 0 && !otherSkills) { showFieldError('fg-skills', 'err-skills'); valid = false; }
+
+    // Experience
+    const experience = document.getElementById('ta-experience').value.trim();
+    if (!experience) { showFieldError('fg-experience', 'err-experience'); valid = false; }
+
+    // Availability
+    const availability = document.querySelector('input[name="availability"]:checked');
+    if (!availability) { showFieldError('fg-availability', 'err-availability'); valid = false; }
+
+    // Consent
+    const consent = document.getElementById('ta-consent').checked;
+    if (!consent) { showFieldError('fg-consent', 'err-consent'); valid = false; }
+
+    if (!valid) {
+      // Scroll to first error
+      const firstError = teamModalContent.querySelector('.form-group.has-error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // Collect data (ready for backend integration)
+    const formData = new FormData();
+    formData.append('fullName', fullname);
+    formData.append('country', country);
+    formData.append('state', state);
+    formData.append('church', church);
+    formData.append('phoneCode', document.getElementById('ta-phonecode').value);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('photo', photoInput.files[0]);
+    formData.append('skills', Array.from(skillChecks).map(cb => cb.value).join(', '));
+    formData.append('otherSkills', otherSkills);
+    formData.append('experience', experience);
+    formData.append('about', document.getElementById('ta-about').value.trim());
+    formData.append('availability', availability.value);
+
+    // TODO: Send formData to backend endpoint
+    // Example: fetch('/api/team-application', { method: 'POST', body: formData })
+
+    // Show success state
+    teamFormState.style.display = 'none';
+    teamSuccessState.style.display = '';
+    teamModalContent.scrollTop = 0;
+  });
 </script>
 
 </body>
